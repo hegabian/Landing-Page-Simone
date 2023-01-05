@@ -1,0 +1,2791 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+html {
+    font-size: 16px;
+}
+:root {
+    --main-color: #20c987
+}
+.back-text {
+    font-size: calc(1.95rem + 8.4vw);
+    opacity: 0.2;
+    color: rgba(128, 128, 128, 0.61);
+}
+
+/* start of navbar */
+nav {
+    width: 100%;
+    height:4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;   
+}
+.clicker {
+    display: none;
+}
+.Simone {
+    padding: 10px 20px 0px 25px;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    
+}
+nav .nav-pages ul {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+nav .nav-pages ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 25px 15px 0px 15px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+nav .nav-pages ul li a:hover {
+    color: var(--main-color) ;
+}
+
+nav .icons {
+    padding: 25px 15px 0px 15px;
+    cursor: pointer;
+}
+nav .icons i {
+    padding: 0px 15px;
+}
+nav .icons #twitter:hover {
+    color: darkturquoise;
+}
+nav .icons #facebook:hover {
+    color: blue;
+}
+nav .icons #dribble:hover {
+    color: red;
+}
+
+
+@media screen and (max-width:992px) {
+    nav {
+        width: 100%;
+        height:4rem;
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 1);
+        color: white;
+        
+    }
+    .clicker {
+        display: block;
+        width: 100%;
+        top: 2rem;
+        position: absolute;
+        text-align: center;
+    }
+    .clicker ul i ul {
+        visibility: hidden;
+    }
+    .clicker ul i ul li a {
+        text-decoration: none;
+        color: white;
+        
+    }
+    .clicker ul i:hover >ul {
+        cursor: pointer;
+        visibility: visible;
+        height: 13rem;
+        width: 20em;
+        color: var(--main-color) ;
+        list-style: none;
+        text-decoration: none;
+        text-align: center;
+        line-height: 1.5rem;
+        padding-left: 0rem;
+        padding-top: 2rem;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .Simone {
+        padding: 10px 5px 10px 10px;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 2rem;
+        font-family: "Poppins", sans-serif;
+    }
+    nav .nav-pages ul {
+        margin-top: -1rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        display: none;
+        
+    }
+    nav .nav-pages ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 25px 15px 0px 15px;
+        cursor: pointer;
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+    nav .nav-pages ul li a:hover {
+        color: var(--main-color) ;
+    }
+    
+    nav .icons {
+        margin: 1rem 0rem 2rem 2rem;
+        padding: 10px 5px 0px 15px;
+        cursor: pointer;
+    }
+    nav .icons i {
+        padding: 0px 15px;
+    }
+    nav .icons #twitter:hover {
+        color: darkturquoise;
+    }
+    nav .icons #facebook:hover {
+        color: blue;
+    }
+    nav .icons #dribble:hover {
+        color: red;
+    }
+       
+}
+
+/* end of navbar */
+
+/* start of navmini */
+navmini .gear i {
+    position: fixed;
+    background: #555;
+    color: #fff;
+    font-size: 1.25rem;
+    border-radius: 4px 0px 0px 4px;
+    padding: 0.6rem 0.6rem;
+    right: 0;
+    top: 15rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+/* end of navmini */
+/* start of header */
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/Simone.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 10rem;
+    position: relative;
+}
+.arrow-down {
+    position: absolute;
+    font-size: 0.5rem;
+    left: 50%;
+    top: 33rem;
+    display: block;
+    text-align: center;
+    z-index: 3;
+    width: 1rem;
+    height: 1rem;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: translate(-50%, 0%) rotate(45deg);
+    animation: arrow 1s infinite;
+  }
+  @keyframes arrow {
+    0%  { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50% { opacity: 1;  }
+    100%{ transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+.layer {
+    background-color: rgba(27, 27, 27, 0.644);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-content {
+    color: white;
+    text-align: center;
+    line-height: 1.8
+}
+.header-content h2 {
+    font-size: 2rem;
+}
+.header-content h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+.header-content p {
+    font-size: 1.8rem;
+    padding-bottom: 2rem;
+}
+
+.header-content h1::after {
+    content: " |";
+    animation-name: words;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes words {
+    0% {  content: " |";  }
+    2% {  content: " S|";  } 
+    4% {  content: " Si|";  } 
+    6% {  content: " Sim|";  } 
+    8% {  content: " Simo|";  } 
+    10% {  content: " Simon|";  } 
+    12% {  content: " Simone|";  } 
+    14% {  content: " Simone |";  } 
+    16% {  content: " Simone O|";  } 
+    18% {  content: " Simone Ol|";  } 
+    20% {  content: " Simone Oli|";  } 
+    22% {  content: " Simone Oliv|";  } 
+    24% {  content: " Simone Olivi|";  } 
+    26% {  content: " Simone Olivia|";  } 
+    28% {  content: " Simone Olivi|";  } 
+    30% {  content: " Simone Oliv|";  } 
+    32% {  content: " Simone Oli|";  } 
+    34% {  content: " Simone Ol|";  } 
+    36% {  content: " Simone O|";  } 
+    38% {  content: " Simone |";  } 
+    40% {  content: " Simone|";  }
+    42% {  content: " Simon|";  } 
+    44% {  content: " Simo|";  }  
+    46% {  content: " Sim|";  }
+    48% {  content: " Si|";  }
+    50% {  content: " S|";  }  
+    52% {  content: " |";  }
+    54% {  content: " ";  }
+    56% {  content: " D|";  }
+    58% {  content: " De|";  }
+    60% {  content: " Des|";  }
+    62% {  content: " Desi|";  }
+    64% {  content: " Desig|";  }
+    66% {  content: " Design|";  }
+    68% {  content: " Designe|";  }
+    70% {  content: " Designer|";  }
+    72% {  content: " Designe|";  }
+    74% {  content: " Design|";  }
+    76% {  content: " Desig|";  }
+    78% {  content: " Desi|";  }
+    80% {  content: " Des|";  }
+    82% {  content: " De|";  }
+    84% {  content: " D|";  }
+    86% {  content: " |";  }
+    88% {  content: " H|";  }
+    90% {  content: " He|";  }
+    92% {  content: " Her|";  }
+    94% {  content: " Here|";  }
+    96% {  content: "  Her|";  }
+    98% {  content: "  He|";  }
+    100% {  content: "  H|";  }
+}
+
+header .layer .header-content button {
+    background-color: transparent;
+    padding: 0.8rem 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 3px solid var(--main-color) ;
+    color: var(--main-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+header .layer .header-content button:hover {
+    background-color: transparent;
+    border: 3px solid var(--main-color) ;
+    color: #ffffff;
+    background-color: var(--main-color);
+    border-radius: 30px;
+}
+
+@media screen and (max-width:992px) {
+    .header-content h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .arrow-down {
+        position: absolute;
+        font-size: 0.5rem;
+        left: 50%;
+        top: 32rem;
+        display: block;
+        text-align: center;
+        z-index: 3;
+        width: 1rem;
+        height: 1rem;
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: translate(-50%, 0%) rotate(45deg);
+        animation: arrow 1s infinite;
+      }
+      @keyframes arrow {
+        0%  { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+        50% { opacity: 1;  }
+        100%{ transform:translate(0,10px) rotate(45deg); opacity: 0; }
+      }
+}
+/* end of header */
+/* start of About */
+
+.about {
+    width: 100%;
+}
+.about .know-me-more {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+.about .know-me-more .about-me {
+    position: relative;
+}
+.about .know-me-more .about-me h3 {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-top: -4rem;
+    z-index: -1;
+}
+.about h2 {
+    font-size: 2.75rem;
+    position: relative;
+}
+.about h2::after {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    border-bottom: 3px solid var(--main-color);
+    right: 46.5%;
+    top: 2rem;
+}
+.about .about-data {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3.5rem 0rem;  
+}
+.about .about-data .resume {
+    width: 60%;
+    line-height: 1.5rem;
+    padding-left: 4.5rem;
+}
+.about .about-data .resume p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+.about .about-data .resume h5 {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+}
+.about .about-data .resume h5 span {
+    color: var(--main-color);
+}
+.about .about-data .info-card {
+    width: 40%;
+    padding-left: 2rem;
+    
+}
+.about .about-data .info-card ul li {
+    width: 60%;
+    list-style-type: none;
+    border-bottom: 1px solid #eaeaea;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 0.1rem;
+    margin-bottom: 1rem;
+}
+.about .about-data .info-card ul li span {
+    font-weight: bold;
+    font-size: 1rem;
+}
+.about .about-data .info-card ul li a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.about .about-data .info-card ul li a:hover {
+    color: #116a48;
+}
+.about .about-data .info-card button {
+    background-color: var(--main-color);
+    padding: 0.9rem 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 3px solid var(--main-color) ;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left: 2.25rem;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.about .about-data .info-card button:hover {
+    background-color: #27b981;
+    border: 3px solid #27b981;
+    color: #ffffff;
+    border-radius: 30px;
+}
+.about .counter {
+    width: 100%;
+}
+.about .counter .count {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    height: 10rem;
+    margin-bottom: 5rem;
+    color: #6c757d;
+}
+.about .counter .count1 {
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid rgba(128, 128, 128, 0.272);
+    
+}
+.about .counter .count1 h5 {
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+}
+.about .counter .count1 p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.about .counter .count2 {
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid rgba(128, 128, 128, 0.272);
+    
+}
+.about .counter .count2 h5 {
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+}
+.about .counter .count2 p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.about .counter .count3 {
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid rgba(128, 128, 128, 0.272);
+    
+}
+.about .counter .count3 h5 {
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+}
+.about .counter .count3 p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.about .counter .count4 {
+    width: 25%;
+    text-align: center;    
+}
+.about .counter .count4 h5 {
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+}
+.about .counter .count4 p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width:992px)  {
+    .about {
+        width: 100%;
+    }
+    .about .know-me-more {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    .about .know-me-more .about-me {
+        position: relative;
+    }
+    .about .know-me-more .about-me h3 {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        margin-top: -2rem;
+        z-index: -1;
+    }
+    .about h2 {
+        font-size: 2.75rem;
+        position: relative;
+    }
+    .about h2::after {
+        content: "";
+        position: absolute;
+        width: 5rem;
+        height: 2rem;
+        border-bottom: 3px solid var(--main-color);
+        right: 46.5%;
+        top: 2rem;
+    }
+    .about .about-data {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 3.5rem 0rem;  
+        padding-right: 4rem;
+        padding-left: 1rem;
+    }
+    .about .about-data .resume {
+        width: 100%;
+        line-height: 1.5rem;
+        padding-left: 4.5rem;
+    }
+    .about .about-data .resume p {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .about .about-data .resume h5 {
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+    .about .about-data .resume h5 span {
+        color: var(--main-color);
+    
+    }
+    .about .about-data .info-card {
+        width: 100%;
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .about .about-data .info-card ul li {
+        width: 100%;
+        list-style-type: none;
+        border-bottom: 1px solid #eaeaea;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 0.1rem;
+        margin-bottom: 1rem;
+    }
+    .about .about-data .info-card ul li span {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .about .about-data .info-card ul li a {
+        text-decoration: none;
+        transition-property: all;
+        transition-duration: 0.5s;
+        padding-left: 5rem;
+       
+    }
+    .about .about-data .info-card ul li a:hover {
+        color: #116a48;
+    }
+    .about .about-data .info-card button {
+        background-color: var(--main-color);
+        padding: 0.9rem 3rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border: 3px solid var(--main-color) ;
+        color: white;
+        border-radius: 30px;
+        cursor: pointer;
+        margin-left: 2.25rem;
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+    .about .about-data .info-card button:hover {
+        background-color: #27b981;
+        border: 3px solid #27b981;
+        color: #ffffff;
+        border-radius: 30px;
+    }
+    .about .counter {
+        width: 100%;
+    }
+    .about .counter .count {
+        display: flex;
+        flex-direction:column;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        height: 10rem;
+        margin-bottom: 5rem;
+        color: #6c757d;
+    }
+    .about .counter .count1 {
+        width: 25%;
+        text-align: center;
+        border-right: 1px solid rgba(128, 128, 128, 0.272);
+        
+    }
+    .about .counter .count1 h5 {
+        font-size: 3rem;
+        padding-bottom: 0.5rem;
+    }
+    .about .counter .count1 p {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .about .counter .count2 {
+        width: 25%;
+        text-align: center;
+        border-right: 1px solid rgba(128, 128, 128, 0.272);
+        
+    }
+    .about .counter .count2 h5 {
+        font-size: 3rem;
+        padding-bottom: 0.5rem;
+    }
+    .about .counter .count2 p {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .about .counter .count3 {
+        width: 25%;
+        text-align: center;
+        border-right: 1px solid rgba(128, 128, 128, 0.272);
+        
+    }
+    .about .counter .count3 h5 {
+        font-size: 3rem;
+        padding-bottom: 0.5rem;
+    }
+    .about .counter .count3 p {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .about .counter .count4 {
+        width: 25%;
+        text-align: center;    
+    }
+    .about .counter .count4 h5 {
+        font-size: 3rem;
+        padding-bottom: 0.5rem;
+    }
+    .about .counter .count4 p {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+/* end of about me */
+/* start of what i do */
+
+
+.whatido {
+    width: 100%;
+    background-color: #f8f9fa;
+}
+.whatido .what-i-do {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+.whatido .what-i-do .about-me {
+    position: relative;
+}
+.whatido .what-i-do .about-me h3 {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-top: -4rem;
+    z-index: 1;
+}
+.whatido h2 {
+    font-size: 2.75rem;
+    position: relative;
+}
+.whatido h2::after {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    border-bottom: 3px solid var(--main-color);
+    right: 46.5%;
+    top: 2rem;
+}
+
+
+.whatido .jobs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+}
+
+.whatido .jobs .job {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 6rem;
+    
+}
+.whatido .jobs .job .icons {
+    background-color: white;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.285);
+    width: 40%;
+    height: 80%;
+    padding-top: 1rem;
+    border-radius: 5px;
+    color: var(--main-color);
+}
+.whatido .jobs .job .text {
+    padding-left: 2rem;
+    line-height: 1.5rem;
+}
+.whatido .jobs .job .text h6 {
+    font-size: large;
+    font-weight: 800;
+    padding-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 992px) {
+    
+.whatido {
+    width: 100%;
+    background-color: #f8f9fa;
+}
+.whatido .what-i-do {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+.whatido .what-i-do .about-me {
+    position: relative;
+}
+.whatido .what-i-do .about-me h3 {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-top: -4rem;
+    z-index: 1;
+}
+.whatido h2 {
+    font-size: 2.75rem;
+    position: relative;
+    
+}
+.whatido h2::after {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    border-bottom: 3px solid var(--main-color);
+    right: 40%;
+    top: 2rem;
+}
+
+
+.whatido .jobs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.whatido .jobs .job {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    
+}
+.whatido .jobs .job .icons {
+    background-color: white;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.285);
+    width: 40%;
+    height: 80%;
+    padding-top: 0rem;
+    border-radius: 5px;
+    color: var(--main-color);
+}
+.whatido .jobs .job .text {
+    padding-left: 2rem;
+    line-height: 1.5rem;
+}
+.whatido .jobs .job .text h6 {
+    font-size: large;
+    font-weight: 800;
+    padding-bottom: 0.5rem;
+}
+
+}
+    
+
+/* end of what i do */
+/* start of resumee */
+.resumee {
+    width: 100%;
+}
+.resumee .word {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+.resumee .word .summary {
+    position: relative;
+}
+.resumee .word .summary h3 {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-top: -4rem;
+    z-index: -1;
+}
+.resumee h2 {
+    font-size: 2.75rem;
+    position: relative;
+}
+.resumee h2::after {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    border-bottom: 3px solid var(--main-color);
+    right: 46.5%;
+    top: 2rem;
+}
+
+.allres {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+}
+.allres .myeducation {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+.allres .myeducation h3 {
+    font-size: x-large;
+    font-weight: 900;
+    margin-left: 3rem;
+}
+.allres .myeducation .computerscience {
+    border: 0.5px solid rgba(0, 0, 0, 0.285);
+    width: 100%;
+    margin: 1rem 0rem;
+    padding: 1rem 1rem;
+    line-height: 1rem;
+    border-radius: 5px;
+}
+.allres .myeducation .computerscience h6 {
+    border: #27b981 2px solid;
+    width: 6rem;
+    font-size: small;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: white;
+    margin-bottom: 1rem;
+}
+.allres .myeducation .computerscience h4 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+.allres .myeducation .computerscience h5 {
+    color: red;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.allres .myeducation .computerscience p {
+    line-height: 1.9rem;
+}
+
+.allres .myexperience {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+.allres .myexperience h3 {
+    font-size: x-large;
+    font-weight: 900;
+    margin-left: 3rem;
+}
+.allres .myexperience .jrdesinger {
+    border: 0.5px solid rgba(0, 0, 0, 0.285);
+    width: 100%;
+    margin: 1rem 0rem;
+    padding: 1rem 1rem;
+    line-height: 1rem;
+    border-radius: 5px;
+}
+.allres .myexperience .jrdesinger h6 {
+    border: #27b981 2px solid;
+    width: 6rem;
+    font-size: small;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: white;
+    margin-bottom: 1rem;
+}
+.allres .myexperience .jrdesinger h4 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+.allres .myexperience .jrdesinger h5 {
+    color: red;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.allres .myexperience .jrdesinger p {
+    line-height: 1.9rem;
+}
+
+
+
+
+ #progressbar {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 13px;
+    padding: 2px;
+  }
+  
+  #progressbar>div {
+    background-color:var(--main-color);
+    width: 65%;
+    height: 7px;
+    border-radius: 10px;
+  }
+
+  .myskills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
+  .resumee .myskills .skill{
+    width: 50%;
+    padding: 1rem 4rem;
+
+  }
+  .resumee .myskills .skill .txt {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+  }
+  .resumee  h1 {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    padding-bottom: 1.5rem;
+    padding-left: 4rem;
+  }
+  .resumee .myskills .skill .txt h5 {
+    font-size: medium;    
+  }
+  .resumee .myskills .skill2 #progressbar {
+    background-color:#e9ecef;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+  }
+  .resumee .myskills .skill2 #progressbar>div {
+    background-color:var(--main-color);
+    width: 70%;
+    height: 7px;
+    border-radius: 10px;
+  }
+  .resumee .myskills .skill3 #progressbar {
+    background-color:#e9ecef;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+  }
+  .resumee .myskills .skill3 #progressbar>div {
+    background-color:var(--main-color);
+    width: 95%;
+    height: 7px;
+    border-radius: 10px;
+  }
+  .resumee .myskills .skill4 #progressbar {
+    background-color:#e9ecef;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+  }
+  .resumee .myskills .skill4 #progressbar>div {
+    background-color:var(--main-color);
+    width: 95%;
+    height: 7px;
+    border-radius: 10px;
+  }
+  .resumee .myskills .skill4 #progressbar {
+    background-color:#e9ecef;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+  }
+  .resumee .myskills .skill4 #progressbar>div {
+    background-color:var(--main-color);
+    width: 80%;
+    height: 7px;
+    border-radius: 10px;
+  }
+  .resumee .myskills .skill5 #progressbar {
+    background-color:#e9ecef;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+  }
+  .resumee .myskills .skill5 #progressbar>div {
+    background-color:var(--main-color);
+    width: 80%;
+    height: 7px;
+    border-radius: 10px;
+  }
+  .resumee .myskills .skill6 #progressbar {
+    background-color:#e9ecef;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+  }
+  .resumee .myskills .skill6 #progressbar>div {
+    background-color:var(--main-color);
+    width: 99%;
+    height: 7px;
+    border-radius: 10px;
+  }
+  
+
+  .resumee button {
+    width: 12rem;
+    background-color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 3px gray solid ;
+    color: gray;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 1rem;
+    transition-property: all;
+    transition-duration: 0.5s;
+    margin-left: 33.4rem;
+    margin-bottom: 5rem;
+}
+.resumee button:hover {
+    background-color: gray;
+    border: 3px solid gray;
+    color: #ffffff;
+    border-radius: 30px;
+}
+
+@media screen and (max-width:992px){
+    .resumee {
+        width: 100%;   
+    }
+    .resumee .word {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    .resumee .word .summary {
+        position: relative;
+    }
+    .resumee .word .summary h3 {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        margin-top: -4rem;
+        z-index: -1;
+    }
+    .resumee h2 {
+        font-size: 2.75rem;
+        position: relative;
+    }
+    .resumee h2::after {
+        content: "";
+        position: absolute;
+        width: 5rem;
+        height: 2rem;
+        border-bottom: 3px solid var(--main-color);
+        right: 46.5%;
+        top: 2rem;
+    }
+    
+    .allres {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+    .allres .myeducation {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+    .allres .myeducation h3 {
+        font-size: x-large;
+        font-weight: 900;
+        margin-left: 3rem;
+    }
+    .allres .myeducation .computerscience {
+        border: 0.5px solid rgba(0, 0, 0, 0.285);
+        width: 100%;
+        margin: 1rem 0rem;
+        padding: 1rem 1rem;
+        line-height: 1rem;
+        border-radius: 5px;
+    }
+    .allres .myeducation .computerscience h6 {
+        border: #27b981 2px solid;
+        width: 6rem;
+        font-size: small;
+        font-weight: 800;
+        text-align: center;
+        border-radius: 5px;
+        background-color: var(--main-color);
+        color: white;
+        margin-bottom: 1rem;
+    }
+    .allres .myeducation .computerscience h4 {
+        font-size: 1.2rem;
+        font-weight: bolder;
+        margin-bottom: 1rem;
+    }
+    .allres .myeducation .computerscience h5 {
+        color: red;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    .allres .myeducation .computerscience p {
+        line-height: 1.9rem;
+    }
+    
+    .allres .myexperience {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+    .allres .myexperience h3 {
+        font-size: x-large;
+        font-weight: 900;
+        margin-left: 3rem;
+    }
+    .allres .myexperience .jrdesinger {
+        border: 0.5px solid rgba(0, 0, 0, 0.285);
+        width: 100%;
+        margin: 1rem 0rem;
+        padding: 1rem 1rem;
+        line-height: 1rem;
+        border-radius: 5px;
+    }
+    .allres .myexperience .jrdesinger h6 {
+        border: #27b981 2px solid;
+        width: 6rem;
+        font-size: small;
+        font-weight: 800;
+        text-align: center;
+        border-radius: 5px;
+        background-color: var(--main-color);
+        color: white;
+        margin-bottom: 1rem;
+    }
+    .allres .myexperience .jrdesinger h4 {
+        font-size: 1.2rem;
+        font-weight: bolder;
+        margin-bottom: 1rem;
+    }
+    .allres .myexperience .jrdesinger h5 {
+        color: red;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    .allres .myexperience .jrdesinger p {
+        line-height: 1.9rem;
+    }
+    
+    
+    
+    
+     #progressbar {
+        width: 100%;
+        background-color: #e9ecef;
+        border-radius: 13px;
+        padding: 2px;
+      }
+      
+      #progressbar>div {
+        background-color:var(--main-color);
+        width: 65%;
+        height: 7px;
+        border-radius: 10px;
+      }
+    
+      .myskills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 5rem;
+      }
+      .resumee .myskills .skill{
+        width: 50%;
+        padding: 1rem 4rem;
+    
+      }
+      .resumee .myskills .skill .txt {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 0.5rem;
+      }
+      .resumee  h1 {
+        font-size: 1.4rem;
+        font-weight: bolder;
+        padding-bottom: 1.5rem;
+        padding-left: 4rem;
+      }
+      .resumee .myskills .skill .txt h5 {
+        font-size: medium;    
+      }
+      .resumee .myskills .skill2 #progressbar {
+        background-color:#e9ecef;
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+      }
+      .resumee .myskills .skill2 #progressbar>div {
+        background-color:var(--main-color);
+        width: 70%;
+        height: 7px;
+        border-radius: 10px;
+      }
+      .resumee .myskills .skill3 #progressbar {
+        background-color:#e9ecef;
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+      }
+      .resumee .myskills .skill3 #progressbar>div {
+        background-color:var(--main-color);
+        width: 95%;
+        height: 7px;
+        border-radius: 10px;
+      }
+      .resumee .myskills .skill4 #progressbar {
+        background-color:#e9ecef;
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+      }
+      .resumee .myskills .skill4 #progressbar>div {
+        background-color:var(--main-color);
+        width: 95%;
+        height: 7px;
+        border-radius: 10px;
+      }
+      .resumee .myskills .skill4 #progressbar {
+        background-color:#e9ecef;
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+      }
+      .resumee .myskills .skill4 #progressbar>div {
+        background-color:var(--main-color);
+        width: 80%;
+        height: 7px;
+        border-radius: 10px;
+      }
+      .resumee .myskills .skill5 #progressbar {
+        background-color:#e9ecef;
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+      }
+      .resumee .myskills .skill5 #progressbar>div {
+        background-color:var(--main-color);
+        width: 80%;
+        height: 7px;
+        border-radius: 10px;
+      }
+      .resumee .myskills .skill6 #progressbar {
+        background-color:#e9ecef;
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+      }
+      .resumee .myskills .skill6 #progressbar>div {
+        background-color:var(--main-color);
+        width: 99%;
+        height: 7px;
+        border-radius: 10px;
+      }
+      
+    
+      .resumee .btnn button {
+        width: 12rem;
+        background-color: white;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border: 3px gray solid ;
+        color: gray;
+        border-radius: 30px;
+        cursor: pointer;
+        transition-property: all;
+        transition-duration: 0.5s;
+        margin-bottom: 5rem;
+        margin-left: 9rem;
+    }
+    .resumee .btnn button:hover {
+        background-color: gray;
+        border: 3px solid gray;
+        color: #ffffff;
+        border-radius: 30px;
+    }
+    
+}
+/* end of section resumee*/
+
+/* start of section mywork */
+.mywork {
+    width: 100%;
+    background-color: #f8f9fa;
+}
+.mywork .word {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+.mywork .word .back-text {
+    position: relative;
+}
+.mywork .word .back-text h3 {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-top: -4rem;
+    z-index: -1;
+}
+.mywork h2 {
+    font-size: 2.25rem;
+    font-weight: 900;
+    position: relative;
+    padding-bottom: 5rem;
+    margin-top: -8rem;
+}
+.mywork h2::after {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    border-bottom: 3px solid var(--main-color);
+    right: 46.5%;
+    top: 1.5rem;
+}
+.mywork .choices ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+}
+.mywork .choices ul li {
+    list-style: none;
+    cursor: pointer;
+    color: #838fa0;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0rem 1.25rem;
+}
+.mywork .choices ul li:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.image-section {
+    width: 100%;
+    padding: 0rem 4.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 5rem;
+}
+.image-section .secimg {
+    width:30%;
+    overflow: hidden;
+    
+}
+.image-section .img1 {
+    position: relative;
+}
+.image-section .secimg img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    transition-property: blur;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    
+}
+.image-section .secimg .img1 img {
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.image-section .secimg .img1 img:hover {
+    transform: scale(1.01rem);
+    filter: blur(20px);  
+}
+.image-section .secimg .img1 .overlaay {
+    background-color: rgba(0, 0, 0, 0.8); 
+    text-align: center;
+    position: absolute;
+    padding-top: 6rem;
+    border-radius: 0.3rem;
+    top: 0;
+    bottom: 1.4rem;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 0%;
+    transition-property: all;
+    transition-duration: 0.5s;
+    
+}
+.image-section .secimg .img1 .overlaay:hover {
+    
+    opacity: 100%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+    
+}
+
+.image-section .img2 {
+    position: relative;
+}
+.image-section .secimg img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    transition-property: blur;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    
+}
+.image-section .secimg .img2 img {
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.image-section .secimg .img2 img:hover {
+    transform: scale(1.01rem);
+    filter: blur(20px);
+    
+}
+.image-section .secimg .img2 .overlaay {
+    background-color: rgba(0, 0, 0, 0.8); 
+    text-align: center;
+    position: absolute;
+    padding-top: 14rem;
+    border-radius: 0.3rem;
+    top: 0;
+    bottom: 1.4rem;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 0%;
+    transition-property: all;
+    transition-duration: 0.5s;
+    
+}
+.image-section .secimg .img2 .overlaay:hover {
+    
+    opacity: 100%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
+
+.image-section .img3 {
+    position: relative;
+}
+.image-section .secimg img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    transition-property: blur;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    
+}
+.image-section .secimg .img3 img {
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.image-section .secimg .img3 img:hover {
+    transform: scale(1.01rem);
+    filter: blur(20px);
+    
+}
+.image-section .secimg .img3 .overlaay {
+    background-color: rgba(0, 0, 0, 0.8); 
+    text-align: center;
+    position: absolute;
+    padding-top: 14rem;
+    border-radius: 0.3rem;
+    top: 0;
+    bottom: 1.4rem;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 0%;
+    transition-property: all;
+    transition-duration: 0.5s;
+    
+}
+.image-section .secimg .img3 .overlaay:hover {
+    
+    opacity: 100%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.image-section .img4 {
+    position: relative;
+}
+.image-section .secimg img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    transition-property: blur;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    
+}
+.image-section .secimg .img4 img {
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.image-section .secimg .img4 img:hover {
+    transform: scale(1.01rem);
+    filter: blur(20px);
+    
+}
+.image-section .secimg .img4 .overlaay {
+    background-color: rgba(0, 0, 0, 0.8); 
+    text-align: center;
+    position: absolute;
+    padding-top: 9rem;
+    border-radius: 0.3rem;
+    top: 0;
+    bottom: 1.4rem;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 0%;
+    transition-property: all;
+    transition-duration: 0.5s;
+    
+}
+.image-section .secimg .img4 .overlaay:hover {
+    
+    opacity: 100%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
+
+.image-section .img5 {
+    position: relative;
+}
+.image-section .secimg img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    transition-property: blur;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    
+}
+.image-section .secimg .img5 img {
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.image-section .secimg .img5 img:hover {
+    transform: scale(1.01rem);
+    filter: blur(20px);
+    
+}
+.image-section .secimg .img5 .overlaay {
+    background-color: rgba(0, 0, 0, 0.8); 
+    text-align: center;
+    position: absolute;
+    padding-top: 6rem;
+    border-radius: 0.3rem;
+    top: 0;
+    bottom: 1.4rem;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 0%;
+    transition-property: all;
+    transition-duration: 0.5s;
+    
+}
+.image-section .secimg .img5 .overlaay:hover {
+    
+    opacity: 100%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
+.image-section .img6 {
+    position: relative;
+}
+.image-section .secimg img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    transition-property: blur;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    
+}
+.image-section .secimg .img6 img {
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.image-section .secimg .img6 img:hover {
+    transform: scale(1.01rem);
+    filter: blur(20px);
+    
+}
+.image-section .secimg .img6 .overlaay {
+    background-color: rgba(0, 0, 0, 0.8); 
+    text-align: center;
+    position: absolute;
+    padding-top: 6rem;
+    border-radius: 0.3rem;
+    top: 0;
+    bottom: 1.4rem;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 0%;
+    transition-property: all;
+    transition-duration: 0.5s;
+    
+}
+.image-section .secimg .img6 .overlaay:hover {
+    
+    opacity: 100%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
+.image-section .img7 {
+    position: relative;
+}
+.image-section .secimg img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    transition-property: blur;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    
+}
+.image-section .secimg .img7 img {
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.image-section .secimg .img7 img:hover {
+    transform: scale(1.01rem);
+    filter: blur(20px);
+    
+}
+.image-section .secimg .img7 .overlaay {
+    background-color: rgba(0, 0, 0, 0.8); 
+    text-align: center;
+    position: absolute;
+    padding-top: 9rem;
+    border-radius: 0.3rem;
+    top: 0;
+    bottom: 1.4rem;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 0%;
+    transition-property: all;
+    transition-duration: 0.5s;
+    
+}
+.image-section .secimg .img7 .overlaay:hover {
+    
+    opacity: 100%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
+
+@media screen and (max-width: 992px) {
+    .mywork {
+        width: 100%;
+        background-color: #f8f9fa;
+    }
+    .mywork .word {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    .mywork .word .back-text {
+        position: relative;
+    }
+    .mywork .word .back-text h3 {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        margin-top: -9rem;
+        z-index: -1;
+    }
+    .mywork h2 {
+        font-size: 2.25rem;
+        font-weight: 900;
+        position: relative;
+        padding-bottom: 5rem;
+        margin-top: -4rem;
+    }
+    .mywork h2::after {
+        content: "";
+        position: absolute;
+        width: 5rem;
+        height: 2rem;
+        border-bottom: 2px solid var(--main-color);
+        right: 43%;
+        top: 1.5rem;
+    }
+    .mywork .choices ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -3rem;
+        margin-bottom: 3rem;
+    }
+    .mywork .choices ul li {
+        list-style: none;
+        cursor: pointer;
+        color: #838fa0;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 0rem 1.25rem;
+    }
+    .mywork .choices ul li:hover {
+        color: var(--main-color);
+        text-decoration: underline;
+    }
+    .image-section {
+        width: 100%;
+        padding: 0rem 4.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 5rem;
+    }
+    .image-section .secimg {
+        width:30%;
+        overflow: hidden;
+        
+    }
+    .image-section .img1 {
+        position: relative;
+    }
+    .image-section .secimg img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border-radius: 0.3rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0.8;
+        transition-property: blur;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        
+    }
+    .image-section .secimg .img1 img {
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+    .image-section .secimg .img1 img:hover {
+        transform: scale(1.01rem);
+        filter: blur(20px);  
+    }
+    .image-section .secimg .img1 .overlaay {
+        background-color: rgba(0, 0, 0, 0.8); 
+        text-align: center;
+        position: absolute;
+        padding-top: 1rem;
+        font-size: smaller;
+        border-radius: 0.3rem;
+        top: 0;
+        bottom: 1.4rem;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        opacity: 0%;
+        transition-property: all;
+        transition-duration: 0.5s;
+        
+    }
+    .image-section .secimg .img1 .overlaay:hover {
+        
+        opacity: 100%;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        
+        
+    }
+    
+    .image-section .img2 {
+        position: relative;
+    }
+    .image-section .secimg img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border-radius: 0.3rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0.8;
+        transition-property: blur;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        
+    }
+    .image-section .secimg .img2 img {
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+    .image-section .secimg .img2 img:hover {
+        transform: scale(1.01rem);
+        filter: blur(20px);
+        
+    }
+    .image-section .secimg .img2 .overlaay {
+        background-color: rgba(0, 0, 0, 0.8); 
+        text-align: center;
+        position: absolute;
+        padding-top: 3rem;
+        border-radius: 0.3rem;
+        top: 0;
+        bottom: 1.4rem;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        opacity: 0%;
+        transition-property: all;
+        transition-duration: 0.5s;
+        
+    }
+    .image-section .secimg .img2 .overlaay:hover {
+        
+        opacity: 100%;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        
+    }
+    
+    .image-section .img3 {
+        position: relative;
+    }
+    .image-section .secimg img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border-radius: 0.3rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0.8;
+        transition-property: blur;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        
+    }
+    .image-section .secimg .img3 img {
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+    .image-section .secimg .img3 img:hover {
+        transform: scale(1.01rem);
+        filter: blur(20px);
+        
+    }
+    .image-section .secimg .img3 .overlaay {
+        background-color: rgba(0, 0, 0, 0.8); 
+        text-align: center;
+        position: absolute;
+        padding-top: 4rem;
+        border-radius: 0.3rem;
+        top: 0;
+        bottom: 1.4rem;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        opacity: 0%;
+        transition-property: all;
+        transition-duration: 0.5s;
+        
+    }
+    .image-section .secimg .img3 .overlaay:hover {
+        
+        opacity: 100%;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+    
+    .image-section .img4 {
+        position: relative;
+    }
+    .image-section .secimg img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border-radius: 0.3rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0.8;
+        transition-property: blur;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        
+    }
+    .image-section .secimg .img4 img {
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+    .image-section .secimg .img4 img:hover {
+        transform: scale(1.01rem);
+        filter: blur(20px);
+        
+    }
+    .image-section .secimg .img4 .overlaay {
+        background-color: rgba(0, 0, 0, 0.8); 
+        text-align: center;
+        position: absolute;
+        padding-top: 2rem;
+        border-radius: 0.3rem;
+        top: 0;
+        bottom: 1.4rem;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        opacity: 0%;
+        transition-property: all;
+        transition-duration: 0.5s;
+        
+    }
+    .image-section .secimg .img4 .overlaay:hover {
+        
+        opacity: 100%;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        
+    }
+    
+    .image-section .img5 {
+        position: relative;
+    }
+    .image-section .secimg img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border-radius: 0.3rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0.8;
+        transition-property: blur;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        
+    }
+    .image-section .secimg .img5 img {
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+    .image-section .secimg .img5 img:hover {
+        transform: scale(1.01rem);
+        filter: blur(20px);
+        
+    }
+    .image-section .secimg .img5 .overlaay {
+        background-color: rgba(0, 0, 0, 0.8); 
+        text-align: center;
+        position: absolute;
+        padding-top: 1rem;
+        border-radius: 0.3rem;
+        top: 0;
+        bottom: 1.4rem;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        opacity: 0%;
+        transition-property: all;
+        transition-duration: 0.5s;
+        
+    }
+    .image-section .secimg .img5 .overlaay:hover {
+        
+        opacity: 100%;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        
+    }
+    .image-section .img6 {
+        position: relative;
+    }
+    .image-section .secimg img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border-radius: 0.3rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0.8;
+        transition-property: blur;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        
+    }
+    .image-section .secimg .img6 img {
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+    .image-section .secimg .img6 img:hover {
+        transform: scale(1.01rem);
+        filter: blur(20px);
+        
+    }
+    .image-section .secimg .img6 .overlaay {
+        background-color: rgba(0, 0, 0, 0.8); 
+        text-align: center;
+        position: absolute;
+        padding-top: 1rem;
+        border-radius: 0.3rem;
+        top: 0;
+        bottom: 1.4rem;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        opacity: 0%;
+        transition-property: all;
+        transition-duration: 0.5s;
+        
+    }
+    .image-section .secimg .img6 .overlaay:hover {
+        
+        opacity: 100%;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        
+    }
+    .image-section .img7 {
+        position: relative;
+    }
+    .image-section .secimg img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border-radius: 0.3rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0.8;
+        transition-property: blur;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        
+    }
+    .image-section .secimg .img7 img {
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+    .image-section .secimg .img7 img:hover {
+        transform: scale(1.01rem);
+        filter: blur(20px);
+        
+    }
+    .image-section .secimg .img7 .overlaay {
+        background-color: rgba(0, 0, 0, 0.8); 
+        text-align: center;
+        position: absolute;
+        padding-top: 2rem;
+        border-radius: 0.3rem;
+        top: 0;
+        bottom: 1.4rem;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        opacity: 0%;
+        transition-property: all;
+        transition-duration: 0.5s;
+        
+    }
+    .image-section .secimg .img7 .overlaay:hover {
+        
+        opacity: 100%;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        
+    }    
+}
+/* end of my work */
+
+/* start of cleint */
+.client-speak {
+    width: 100%;
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.client-speak .word h2 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-top: -8rem;
+    text-align: center;
+}
+.client-speak .word h3 {
+    text-align: center;
+} 
+.client-speak .word h2::after {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    border-bottom: 3px solid var(--main-color);
+    right: 46.5%;
+    top: 1.5rem;
+}
+
+.client-speak .test-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.client-speak .test-cards .test-card1 {
+    background-color: #f8f9fa;
+    margin: 1rem 1rem 1rem 5rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.client-speak .test-cards .test-card1 .img-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+}
+.client-speak .test-cards .test-card1 .img-text img {
+    border-radius: 80%;
+}
+.client-speak .test-cards .test-card1 .img-text .desc {
+    padding-left: 1.5rem;
+}
+.client-speak .test-cards .test-card1 .img-text .desc h6 {
+    font-size: medium;
+    font-weight: bold;
+}
+.client-speak .test-cards .test-card1 .img-text .desc p {
+    font-size: medium;
+    font-weight: bold;
+    color: #6c757f;
+}
+.client-speak .test-cards .test-card1 p {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    padding-bottom: 1.2rem;
+}
+.client-speak .test-cards .test-card1 .rating i {
+    color: gold;
+}
+
+.client-speak .test-cards .test-card2 {
+    background-color: #f8f9fa;
+    margin: 1rem 5rem 1rem 1rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.client-speak .test-cards .test-card2 .img-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+}
+.client-speak .test-cards .test-card2 .img-text img {
+    border-radius: 80%;
+}
+.client-speak .test-cards .test-card2 .img-text .desc {
+    padding-left: 1.5rem;
+}
+.client-speak .test-cards .test-card2 .img-text .desc h6 {
+    font-size: medium;
+    font-weight: bold;
+}
+.client-speak .test-cards .test-card2 .img-text .desc p {
+    font-size: medium;
+    font-weight: bold;
+    color: #6c757f;
+}
+.client-speak .test-cards .test-card2 p {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    padding-bottom: 1.2rem;
+}
+.client-speak .test-cards .test-card2 .rating i {
+    color: gold;
+}
+
+@media screen and (max-width: 992px) {
+    .client-speak {
+        width: 100%;
+        background-color: #ffffff;
+        margin-bottom: 2rem;
+    }
+    
+    .client-speak .word h2 {
+        font-size: 2.25rem;
+        font-weight: bold;
+        position: relative;
+        padding-bottom: 1rem;
+        margin-top: -4rem;
+        text-align: center;
+    }
+    .client-speak .word h3 {
+        text-align: center;
+    } 
+    .client-speak .word h2::after {
+        content: "";
+        position: absolute;
+        width: 5rem;
+        height: 2rem;
+        border-bottom: 3px solid var(--main-color);
+        right: 46.5%;
+        top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .client-speak .test-cards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+    .client-speak .test-cards .test-card1 {
+        background-color: #f8f9fa;
+        margin: 1rem 1rem 1rem 1rem;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .client-speak .test-cards .test-card1 .img-text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 1.5rem;
+    }
+    .client-speak .test-cards .test-card1 .img-text img {
+        border-radius: 80%;
+    }
+    .client-speak .test-cards .test-card1 .img-text .desc {
+        padding-left: 1.5rem;
+    }
+    .client-speak .test-cards .test-card1 .img-text .desc h6 {
+        font-size: medium;
+        font-weight: bold;
+    }
+    .client-speak .test-cards .test-card1 .img-text .desc p {
+        font-size: medium;
+        font-weight: bold;
+        color: #6c757f;
+    }
+    .client-speak .test-cards .test-card1 p {
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        padding-bottom: 1.2rem;
+    }
+    .client-speak .test-cards .test-card1 .rating i {
+        color: gold;
+    }
+    
+    .client-speak .test-cards .test-card2 {
+        background-color: #f8f9fa;
+        margin: 1rem 1rem 1rem 1rem;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .client-speak .test-cards .test-card2 .img-text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 1.5rem;
+    }
+    .client-speak .test-cards .test-card2 .img-text img {
+        border-radius: 80%;
+    }
+    .client-speak .test-cards .test-card2 .img-text .desc {
+        padding-left: 1.5rem;
+    }
+    .client-speak .test-cards .test-card2 .img-text .desc h6 {
+        font-size: medium;
+        font-weight: bold;
+    }
+    .client-speak .test-cards .test-card2 .img-text .desc p {
+        font-size: medium;
+        font-weight: bold;
+        color: #6c757f;
+    }
+    .client-speak .test-cards .test-card2 p {
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        padding-bottom: 1.2rem;
+    }
+    .client-speak .test-cards .test-card2 .rating i {
+        color: gold;
+    }
+}
+
+/* end of testmonials */
+
+/* start of contact */
+.get-in-touch {
+    background-color: #f8f9fa;
+    width: 100%;
+}
+.get-in-touch .word h2 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-top: -8rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.get-in-touch .word h3 {
+    text-align: center;
+} 
+.get-in-touch .word h2::after {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    border-bottom: 3px solid var(--main-color);
+    right: 46.5%;
+    top: 1.5rem;
+}
+.add-notes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0rem 4rem;
+}
+.add-notes .address {
+    width: 30%;
+} 
+.add-notes .send-us-note {
+    width: 70%;
+}
+.add-notes .address h3 {
+    padding-bottom: 1rem;
+    font-size: larger;
+}
+.add-notes .address p {
+    width: 53%;
+    line-height: 1.8rem;
+    padding-bottom: 1rem;
+    color: #4c4d4d;
+}
+.add-notes .address .con-num {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: 2rem;
+    padding-bottom: 1rem;
+}
+.add-notes .address .con-num .line {
+    display: flex;
+    flex-wrap: wrap;
+}
+.add-notes .address .con-num .line h5 {
+    font-size: medium;
+    color: #4c4d4d;
+}
+.add-notes .address .con-num .line i {
+    color: var(--main-color);
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+}
+.add-notes .address .icoons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.add-notes .address .icoons i {
+    padding-left: 1rem;
+    color: #4c4d4d ;
+}
+
+.add-notes .form .name-mail {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0rem 2rem 1.5rem 1.5rem;
+}
+.add-notes .form .name-mail .g .xy {
+    width: 22rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.5px solid #4c4d4d;
+}
+.add-notes .form H3 {
+    padding-bottom: 2rem;
+}
+.add-notes .form .g .xta {
+    margin: 0rem 1.8rem 0rem 2rem;
+    resize: vertical;
+    width: 45rem;
+    height: 8rem;
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+    border: 0.5px solid #4c4d4d;
+}
+.add-notes .form button {
+    background-color: var(--main-color);
+    padding: 0.5rem 2.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 3px solid var(--main-color) ;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left: 19rem;
+    transition-property: all;
+    transition-duration: 0.5s;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.add-notes .form button:hover {
+    background-color: #23a171;
+    border: 3px solid #23a171;
+    color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px rgb(81, 78, 78);
+}
+
+@media screen and (max-width: 992px) {
+    .get-in-touch {
+        background-color: #f8f9fa;
+        width: 100%;
+    }
+    .get-in-touch .word h2 {
+        font-size: 2.25rem;
+        font-weight: bold;
+        position: relative;
+        padding-bottom: 1rem;
+        margin-top: -4rem;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    .get-in-touch .word h3 {
+        text-align: center;
+    } 
+    .get-in-touch .word h2::after {
+        content: "";
+        position: absolute;
+        width: 5rem;
+        height: 2rem;
+        border-bottom: 3px solid var(--main-color);
+        right: 43%;
+        top: 1.5rem;
+    }
+    .add-notes {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0rem 4rem;
+    }
+    .add-notes .address {
+        width: 100%;
+        text-align: center;
+    } 
+    .add-notes .send-us-note {
+        width: 100%;
+    }
+    .add-notes .address h3 {
+        padding-bottom: 1rem;
+        font-size: larger;
+        text-align: center;
+    }
+    .add-notes .address p {
+        width: 100%;
+        line-height: 1.8rem;
+        padding-bottom: 1rem;
+        color: #4c4d4d;
+    }
+    .add-notes .address .con-num {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        line-height: 2rem;
+        padding-bottom: 1rem;
+    }
+    .add-notes .address .con-num .line {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .add-notes .address .con-num .line h5 {
+        font-size: medium;
+        color: #4c4d4d;
+    }
+    .add-notes .address .con-num .line i {
+        color: var(--main-color);
+        padding-top: 0.5rem;
+        padding-right: 1rem;
+    }
+    .add-notes .address .icoons {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    .add-notes .address .icoons i {
+        padding-left: 1rem;
+        color: #4c4d4d ;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .add-notes .send-us-note .form h3 {
+        text-align: center;
+    }
+    .add-notes .form .name-mail {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0rem 2rem 1.5rem 1.5rem;
+    }
+    .add-notes .form .name-mail .g .xy {
+        width: 22rem;
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        border: 0.5px solid #4c4d4d;
+        margin-bottom: 1.5rem;
+    }
+    .add-notes .form H3 {
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+    .add-notes .form .g .xta {
+        margin: 0rem 1.8rem 0rem 0rem;
+        resize: vertical;
+        width: 22rem;
+        height: 8rem;
+        border-radius: 0.5rem;
+        padding: 1rem 1.2rem;
+        margin-bottom: 1.5rem;
+        border: 0.5px solid #4c4d4d;
+        
+    }
+    .add-notes .form .btnn button {
+        background-color: var(--main-color);
+        padding: 0.5rem 2.5rem;
+        font-size: 0.8rem;
+        margin-left: 5.5rem;
+        font-weight: bold;
+        border: 3px solid var(--main-color) ;
+        color: white;
+        border-radius: 30px;
+        cursor: pointer;
+        transition-property: all;
+        transition-duration: 0.5s;
+        margin-bottom: 2rem;
+    }
+    
+    .add-notes .form .btnn button:hover {
+        background-color: #23a171;
+        border: 3px solid #23a171;
+        color: #ffffff;
+        border-radius: 30px;
+        box-shadow: 0px 0px 4px rgb(81, 78, 78);
+    }
+}
+/* end of contact */
+/* start of footer */
+.copyrights {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem 6rem;
+    font-weight: 800;
+}
+.copyrights p span {
+    color: var(--main-color);
+}
+.copyrights .terms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.copyrights .terms h4 {
+    font-size: medium;
+    border-right: 0.5px solid #4c4d4d63;
+    padding-right: 0.5rem;
+}
+.copyrights .terms h3 {
+    font-size: medium;
+   
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+@media screen and (max-width: 992px) {
+    .copyrights {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4rem 6rem;
+        font-weight: 800;
+    }
+    .copyrights p {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .copyrights p span {
+        color: var(--main-color);
+    }
+    .copyrights .terms {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .copyrights .terms h4 {
+        font-size: medium;
+        border-right: 0.5px solid #4c4d4d63;
+        padding-right: 0.5rem;
+    }
+    .copyrights .terms h3 {
+        font-size: medium;
+       
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}
+/* end of footer */
